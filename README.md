@@ -47,5 +47,8 @@
       - [프로그래머스](https://programmers.co.kr/): pgm
       - [leetcode](https://leetcode.com/): lc
     - `problem_number`는 문제의 번호로 백준과 프로그래머스는 URL을 통해서, 리트코드는 문제의 설명에서 확인할 수 있습니다.
+      - <img width="202" alt="bj" src="https://user-images.githubusercontent.com/106325839/230321340-dc95a1ff-a5ff-4cfd-ad0a-c674abb3cda9.png">
+      - <img width="406" alt="pgm" src="https://user-images.githubusercontent.com/106325839/230320971-92c6a1c0-ccc4-4f75-b509-9c5c12647a83.png">
+      - <img width="351" alt="lc" src="https://user-images.githubusercontent.com/106325839/230321140-b671d7c8-a902-4032-a318-ccfa1d4a4160.png">
     - `solver_name`은 자신의 영어이름 혹은 이니셜을 작성합니다.
     - ex) 1주차 고정 문제를 풀었을 경우 `pgm-42577-dojinyou.kt`
