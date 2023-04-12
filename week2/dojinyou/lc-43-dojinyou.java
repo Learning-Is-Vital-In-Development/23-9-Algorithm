@@ -64,32 +64,4 @@ public class MultiplyStrings {
 
         return sb.length() != 0 ? sb.toString() : "0";
     }
-
-    public static void main(String[] args) {
-        var solution = new MultiplyStrings();
-        var inputs = new String[][] {
-                {"2", "3"},
-                {"123", "456"},
-                {"0", "0"},
-        };
-
-        var expects = new String[] {
-                "6",
-                "56088",
-                "0"
-        };
-
-        for (int i = 0; i < inputs.length; i++) {
-            var input = inputs[i];
-            var output = solution.multiply(input[0], input[1]);
-
-            var expect = expects[i];
-            var match = output.equals(expect);
-
-            if (!match) {
-                System.out.println("input = "+ Arrays.toString(input));
-                System.out.println("output = "+ output);
-            }
-        }
-    }
 }
