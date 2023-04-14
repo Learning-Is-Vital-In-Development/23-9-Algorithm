@@ -14,21 +14,6 @@ public class pgm_42586_harilsong {
     }
 
     public static int[] solution(int[] progresses, int[] speeds) {
-        // progresses, speeds 를 queue 로 만든다.
-        // 가장 앞에 있는 progress 를 가져온다.
-        // 최초 실행(if dayCount = 1)
-        // 100 미만이라면 가장 앞에 있는 speed 를 한 번 더하고 dayCount 를 1 증가시킨다. 100 이 될 때까지 반복한다.
-        // 100 이 되었으면 progresses.pop, speeds.pop 을 호출하고 release 를 1 증가시킨다.
-
-        // 다시 가장 앞에 있는 progress 를 가져온다.
-        // progress + (dayCount * 가장 앞에 있는 speeds) 를 했을 때 100 을 넘는지 확인한다.
-        // 100 미만이라면, result.add(release) 를 호출하고 release 를 0 으로 만든다.
-        // 가장 앞에 있는 speed 를 한 번 더하고 dayCount 를 1 증가시킨다. 100 이 될 때까지 반복한다.
-        // 100 을 넘는다면 progress.pop, speeds.pop 을 호출하고 release 를 1 증가시킨다.
-
-        // queue 가 비어있을 때까지 반복한다.
-
-        // ---
         // 가장 앞에 있는 progress 를 가져온다.
         // 배포하는데 필요한 날짜 수를 구한다.
         // if dayCount > Math.ceil((100 - progress) / speed) 라면 바로 배포가 가능하므로,
