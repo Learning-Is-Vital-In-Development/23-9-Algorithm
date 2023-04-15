@@ -4,8 +4,8 @@ import java.util.LinkedList;
 
 public class pgm_42586_harilsong {
     public static void main(String[] args) {
-        int[] progresses = {20};
-        int[] speeds = {90};
+        int[] progresses = {90, 90, 90, 90};
+        int[] speeds = {30, 1, 1, 1};
         int[] result = solution(progresses, speeds);
         for (int i : result) {
             System.out.println("i: " + i);
@@ -22,7 +22,6 @@ public class pgm_42586_harilsong {
         // dayCount 를 needDay 로 초기화하고(몇 번 더해야하는지는 상관없으므로)
         // result 의 마지막 원소로 1을 추가한다.
 
-        int dayCount = 1;
         LinkedList<Integer> result = new LinkedList<>();
 
         LinkedList<Integer> progressQueue = new LinkedList<>();
@@ -34,16 +33,18 @@ public class pgm_42586_harilsong {
             speedQueue.add(speed);
         }
 
+        int dayCount = 1;
         while (!progressQueue.isEmpty()) {
-            Integer progress = progressQueue.pop();
-            Integer speed = speedQueue.pop();
+            Integer progress = progressQueue.poll();
+            Integer speed = speedQueue.poll();
 
-            int needDay = (100 - progress) / speed;
-            // progress 가 100 보다 작은데 progress + speed 가 100 을 초과한다면 needDay 는 0 이 아니라 1 이여야 한다.
-            if (progress < 100 && progress + speed > 100) {
-                needDay = 1;
+            int needDay = 0;
+            if ((100 - progress) % speed == 0) {
+                needDay = (100 - progress) / speed;
+            } else {
+                needDay = (100 - progress) / speed + 1;
             }
-            if (dayCount > needDay) {
+            if (dayCount >= needDay && !result.isEmpty()) {
                 Integer last = result.removeLast();
                 result.add(last + 1);
             } else {
