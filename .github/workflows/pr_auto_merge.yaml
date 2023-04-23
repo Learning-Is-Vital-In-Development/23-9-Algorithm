@@ -1,9 +1,7 @@
 name: PR auto merge
 on:
   schedule:
-    - cron: '00 13 * * *'
-    
-  workflow_dispatch:  
+    - cron: '0 0 * * 1'
     
 jobs:
   automerge:
@@ -15,5 +13,3 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
           MERGE_LABELS: ""
           MERGE_METHOD: "squash"
-          LOG: "DEBUG"
-          UPDATE_LABELS: ""
