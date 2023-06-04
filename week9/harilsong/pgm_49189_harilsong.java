@@ -27,13 +27,13 @@ public class pgm_49189_harilsong {
         int maxDist = 0;
         while (!queue.isEmpty()) {
             Integer current = queue.poll();
-            for (Integer adj : graph.get(current)) {
+            for (Integer node : graph.get(current)) {
                 // 방문한 적이 없다면
-                if (!visited[adj]) {
-                    dist[adj] = dist[current] + 1;
-                    visited[adj] = true;
-                    queue.offer(adj);
-                    maxDist = Math.max(maxDist, dist[adj]);
+                if (!visited[node]) {
+                    dist[node] = dist[current] + 1;
+                    visited[node] = true;
+                    queue.offer(node);
+                    maxDist = Math.max(maxDist, dist[node]);
                 }
             }
         }
